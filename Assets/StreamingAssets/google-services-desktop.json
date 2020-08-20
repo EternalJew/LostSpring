@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "257127407642",
+    "firebase_url": "https://lost-spring-c2d74.firebaseio.com",
+    "project_id": "lost-spring-c2d74",
+    "storage_bucket": "lost-spring-c2d74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257127407642:android:329c1403c6167aa057f1a3",
+        "android_client_info": {
+          "package_name": "com.FUGAS.LostSpring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257127407642-np094s5qp460g8mtmo1gqhga39o3rl89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk9eiXO5MlGVxW6YvuVZtHwvMKvvqK6z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257127407642-np094s5qp460g8mtmo1gqhga39o3rl89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
