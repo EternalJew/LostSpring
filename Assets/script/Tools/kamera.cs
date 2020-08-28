@@ -24,4 +24,10 @@ public class kamera : MonoBehaviour
         
 
     }
+
+
+    public void ChangeTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
 }

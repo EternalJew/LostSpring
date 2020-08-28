@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6439576423507210928}
   - component: {fileID: 6439576423507210893}
   - component: {fileID: 6439576423507210894}
-  - component: {fileID: 6439576423507210895}
+  - component: {fileID: 5400264807879775090}
+  - component: {fileID: -4834885541809418279}
   m_Layer: 0
   m_Name: Spike
   m_TagString: enemy
@@ -109,7 +110,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25468695, y: 0.26030117}
   m_EdgeRadius: 0
---- !u!114 &6439576423507210895
+--- !u!111 &5400264807879775090
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6439576423507210929}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &-4834885541809418279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,8 +134,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6439576423507210929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eedca1051068fee4e82ba8d93a030d1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 96c021c438d03754eab763548b138ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeductLives: {fileID: 4296061751734178837, guid: 43fe10378f21c5c4ab394811269ec168,
+  CanvasLose: {fileID: 2475943546292999661, guid: eb1e8fcf96cc6234998dbf0da2fd32e0,
     type: 3}
+  Controller: {fileID: 0}
+  player: {fileID: 0}
+  BonusPanel: {fileID: 0}

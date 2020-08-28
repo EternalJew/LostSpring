@@ -25,7 +25,7 @@ public class Level1d10End : MonoBehaviour
     {
         if (collision.tag == "Finish")
         {
-            SceneManager.LoadScene("levels");
+            SceneManager.LoadScene("level_1.11");
                InterstitialADS.GameOver();
         }
     }

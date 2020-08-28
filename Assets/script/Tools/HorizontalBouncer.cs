@@ -33,7 +33,8 @@ public class HorizontalBouncer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<BoxPhysics>() != null)
+        
+        if (collision.gameObject.GetComponent<DoorOpening>() != null)
         {
             _bounceObject = collision;
             StartCoroutine(Bounce());
@@ -42,7 +43,7 @@ public class HorizontalBouncer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<BoxPhysics>() != null)
+        if (collision.gameObject.GetComponent<DoorOpening>() != null)
         {
             _onBouncer = true;
         }
@@ -50,7 +51,7 @@ public class HorizontalBouncer : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<BoxPhysics>() != null)
+        if (collision.gameObject.GetComponent<DoorOpening>() != null)
         {
             _onBouncer = false;
             _bounceObject = null;

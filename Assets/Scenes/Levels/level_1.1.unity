@@ -6600,7 +6600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675c4f13ada6c12459ff444c12eb88f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneLoad: 3
+  nextSceneLoad: 4
 --- !u!61 &460431205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18820,6 +18820,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2477700675306357777, guid: 20942f4a1e652a343882648794731bf5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2477700676580131464, guid: 20942f4a1e652a343882648794731bf5,
         type: 3}
       propertyPath: Controller
