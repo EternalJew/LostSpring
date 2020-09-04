@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class EnemyMoving : Unit
 {
-     public int EnemySpeed;
-     public int XMoveDirection;
-    
+    public int EnemySpeed;
+    public int XMoveDirection;
+
     private bool shouldDie = false;
     private float deathTimer = 0;
     public float timeBeforeDestroy = 1.0f;
 
     private SpriteRenderer sprite;
     private Vector3 initialScale;
-    public GameObject Flower ;
+    public GameObject Flower;
 
     private enum EnemyState
     {
@@ -34,7 +34,7 @@ public class EnemyMoving : Unit
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(XMoveDirection, 0));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-       
+
         if (hit.distance < 0.35f)
         {
             Flip();
@@ -73,30 +73,39 @@ public class EnemyMoving : Unit
             yield return null;
         }
     }
-     void Flip()
-     {
-           if(XMoveDirection > 0)
-           {
+    void Flip()
+    {
+        if (XMoveDirection > 0)
+        {
             Vector3 direction = transform.right * Input.GetAxis("Horizontal");
             transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, EnemySpeed * Time.deltaTime);
             sprite.flipX = direction.x < 1F;
             XMoveDirection = -1;
-           }
-         else
-         {
+        }
+        else
+        {
             Vector3 direction = transform.right * Input.GetAxis("Horizontal");
             transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, EnemySpeed * Time.deltaTime);
             sprite.flipX = direction.x < 0F;
             XMoveDirection = 1;
-            
-         }
-     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+
+        if (collision.gameObject.GetComponent<character>() != null)
         {
-            Debug.Log("Hitted by player");
+           
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
             Crush();
+
+            Rigidbody2D rigidbody = collision.GetComponent<Rigidbody2D>();
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.AddForce(transform.up * 2f, ForceMode2D.Impulse);
         }
     }
 }

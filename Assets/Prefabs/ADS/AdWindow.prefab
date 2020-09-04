@@ -490,7 +490,6 @@ GameObject:
   - component: {fileID: 2926963963149976324}
   - component: {fileID: 2926963963149976443}
   - component: {fileID: 2926963963149976442}
-  - component: {fileID: 2926963963149976441}
   m_Layer: 5
   m_Name: VeiwRewardedAd
   m_TagString: Untagged
@@ -597,7 +596,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2926963963149976441}
+      - m_Target: {fileID: 2073680579991182385, guid: f2023083bdf0f164aa93352ad4ee7cd9,
+          type: 3}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -608,20 +608,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2926963963149976441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2926963963149976447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363d4dd06f82e4e4ca52ab7c7aa16f20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rewardText: {fileID: 2926963962787324348}
-  panel: {fileID: 2926963961845500327}
-  Controller: {fileID: 0}
-  player1: {fileID: 0}
-  bonuses: {fileID: 0}

@@ -15,49 +15,49 @@ EditorBuildSettings:
     path: Assets/Scenes/menu/setting.unity
     guid: 09476a5f7eae8dd41b254baf6aea76be
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.1.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.1.unity
     guid: d35a09b67a6a2334fb09854e07c1f777
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.2.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.2.unity
     guid: c07de0290c71d8243a86f969c2584b4f
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.3.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.3.unity
     guid: 5bbfdd2d1670581488782d3b9589c793
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.4.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.4.unity
     guid: 6bca1cb1a0c6f5245a475b1ff7b7e66a
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.5.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.5.unity
     guid: 9da7e4a4f2ee27f4ca8ac2cbe25c9438
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.6.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.6.unity
     guid: dd31257602f1a9146b2a6bece8858514
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.7.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.7.unity
     guid: 9d54575d01d6a364e91dd17fa73d119f
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.8.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.8.unity
     guid: 4b52fbcfd4aa1b441a45b048bbc57419
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.9.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.9.unity
     guid: eb5ca845eebacbb4785b419361275301
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.10.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.10.unity
     guid: b670edf99bfa90e4cbadb55c9fb83ac7
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.11.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.11.unity
     guid: 67cda2a174aa19140809e38e029706fb
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.12.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.12.unity
     guid: b4a12cf83a7104f449db664553780f50
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.13.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.13.unity
     guid: 7b50385a126216446acf685bb526c33b
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.14.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.14.unity
     guid: 21bbce6a2ee345942b016e46d42d3880
   - enabled: 1
-    path: Assets/Scenes/Levels/level_1.15.unity
+    path: Assets/Scenes/Levels/SnowWorld/level_1.15.unity
     guid: a0f5821793c4d70459b1d55135e8639a
   - enabled: 1
     path: Assets/Scenes/menu/levels.unity

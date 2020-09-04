@@ -16,7 +16,6 @@ public class TransformRevert : MonoBehaviour
     {
         if(collision.name == "DieSpace")
         {
-            Debug.Log("Revert");
             this.transform.localPosition = startPosition;
             this.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
             this.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);

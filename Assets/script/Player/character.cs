@@ -25,13 +25,13 @@ public class character : Unit
     private Animator animator;
     private SpriteRenderer sprite;
     private SpriteRenderer player;
-    private Vector3 initialScale;
     public GameObject currentRespawn;
     public LayerMask groundLayer;
     public AudioSource CheckPointSound;
     public AudioSource JumpMusic;
 
-
+    private SpriteRenderer _sprite;
+    private Vector2 _initialSpriteSize;
     //public Transform groundCheckPoint;
     //public float groundCheckRadius;
 
@@ -94,7 +94,6 @@ public class character : Unit
          rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        initialScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         _startParentTransform = gameObject.transform.parent;
 
         Save();
@@ -102,6 +101,9 @@ public class character : Unit
         // Чек поінт
         //transform.position = new Vector2(PlayerPrefs.GetFloat("xPos"), PlayerPrefs.GetFloat("yPos"));
         Time.timeScale = 1;
+
+        _sprite = gameObject.GetComponent<SpriteRenderer>();
+        _initialSpriteSize = _sprite.size;
 
     }
     private void FixedUpdate()
@@ -168,9 +170,11 @@ public class character : Unit
         canDamage = false;
         for (int i = 0; i < 2; i++)
         {
-            transform.localScale = new Vector3(initialScale.x, initialScale.y / 2, initialScale.z);
+            _sprite.size = new Vector2(_initialSpriteSize.x, _initialSpriteSize.y / 2);
+            _sprite.color = new Color(0.5f, 1, 1, 1);
             yield return new WaitForSeconds(0.2f);
-            transform.localScale = new Vector3(initialScale.x, initialScale.y, initialScale.z);
+            _sprite.size = new Vector2(_initialSpriteSize.x, _initialSpriteSize.y);
+            _sprite.color = new Color(1, 1, 1, 1);
             yield return new WaitForSeconds(0.2f);
         }
         canDamage = true;
@@ -178,6 +182,7 @@ public class character : Unit
 
     public override void ReceiveDamage()
     {
+        Debug.Log("ReceiveDamage");
         if (canDamage)
         {
             Lives--;
@@ -198,10 +203,13 @@ public class character : Unit
     // Функція віднімання життя від ворога
     public override void DeductLives()
     {
+        if (canDamage)
+        {
             Lives--;
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(transform.up * 2f, ForceMode2D.Impulse);
-        
+            StartCoroutine(DamageAnim());
+        }
     }
 
 
@@ -251,5 +259,5 @@ public class character : Unit
 
         }
     }
-
+ 
 }
