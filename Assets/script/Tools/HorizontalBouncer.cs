@@ -19,7 +19,7 @@ public class HorizontalBouncer : MonoBehaviour
     }
     private IEnumerator Bounce()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         if (_onBouncer)
         {

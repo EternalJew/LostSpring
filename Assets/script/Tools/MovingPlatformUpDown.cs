@@ -14,16 +14,18 @@ public class MovingPlatformUpDown : MonoBehaviour, Platform
     [SerializeField]
     private Transform transformB;
     void Start()
-     {
+    {
         posA = childTransform.localPosition;
         posB = transformB.localPosition;
 
-        nextPos = posB; 
-     }
-     void Update()
+        nextPos = posB;
+    }
+    void Update()
     {
         Move();
     }
+    
+
     private void Move()
     {
         childTransform.localPosition = Vector3.MoveTowards(childTransform.localPosition, nextPos, speed * Time.deltaTime);

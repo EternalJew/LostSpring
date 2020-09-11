@@ -127,4 +127,8 @@ public class buttons : MonoBehaviour
     {
         SceneManager.LoadScene("level_1.15");
     }
+    public void RightArrow()
+    {
+        SceneManager.LoadScene("levels_2");
+    }
 }

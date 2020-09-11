@@ -18,6 +18,7 @@ public class BouncerForPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.gameObject.GetComponent<character>() != null)
         {
             gameObject.GetComponent<Animator>().SetBool("Activate", true);

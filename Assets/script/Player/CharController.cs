@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class CharController : MonoBehaviour
 {
+    private character Character;
     private Animator animator;
     public float playerSpeed;
     public float jumpPower;
@@ -30,11 +31,10 @@ public class CharController : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", Mathf.Abs(directionInput));
-
         if (((directionInput < 0) && (facingRight)) || ((directionInput > 0) && (!facingRight)))
             Flip();
-        if (Input.GetButtonDown("Jump")) Jump();
+        animator.SetFloat("Speed", Mathf.Abs(directionInput));
+            if (Input.GetButtonDown("Jump")) Jump();
         
         // isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
     }
@@ -77,8 +77,9 @@ public class CharController : MonoBehaviour
 
     }
 
-   public  void Flip()
+    public void Flip()
     {
+        //Character.CreateDust();
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;

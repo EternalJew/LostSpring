@@ -10,6 +10,7 @@ public class MovingPlatform : MonoBehaviour, Platform
     public float TransFormPosLeft = 4f;
     public float dirX, moveSpeed = 3f;
     bool moveRight = true;
+    
     void Update()
     {
         if (transform.position.x > TransFormPosLeft)

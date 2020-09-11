@@ -8,35 +8,29 @@ using System.IO;
 using Firebase.Analytics;
 public class character : Unit
 {
-
-    public GameObject respawn;
-    public GameObject CanvasLose;
-    public GameObject Controller;
     [SerializeField] public static int lives = 5;
     [SerializeField] public static int Score = 0;
     [SerializeField] public int key = 0;
-    public int collectlives;
-    // [SerializeField] private float circleRadius = 0.03f;
     [SerializeField] public Livesbar livesbar;
     [SerializeField] private float speed = 3.0F;
+    public int collectlives;
+    public GameObject respawn;
+    public GameObject CanvasLose;
+    public GameObject Controller;
+    public GameObject currentRespawn;
+    public LayerMask groundLayer;
+    public AudioSource CheckPointSound;
+    public AudioSource JumpMusic;
     public float jumpForce = 8.0F;
     public bool isGrounded = false;
     new private Rigidbody2D rigidbody;
     private Animator animator;
     private SpriteRenderer sprite;
     private SpriteRenderer player;
-    public GameObject currentRespawn;
-    public LayerMask groundLayer;
-    public AudioSource CheckPointSound;
-    public AudioSource JumpMusic;
-
     private SpriteRenderer _sprite;
     private Vector2 _initialSpriteSize;
-    //public Transform groundCheckPoint;
-    //public float groundCheckRadius;
-
-    //private bool isTouchingGround;
-
+   // public ParticleSystem Dust;
+   
     public int Lives
     {
         get { return lives; }
@@ -133,6 +127,7 @@ public class character : Unit
         {
             Run(movement);
         }
+       
         //if (IsGrounded() && Input.GetButtonDown("Jump")) Jump();
         //transform.position = new Vector3(sprite.transform.position.x, sprite.transform.position.y, -5.0F);
 
@@ -190,9 +185,6 @@ public class character : Unit
             rigidbody.AddForce(transform.up * 3f, ForceMode2D.Impulse);
             StartCoroutine(DamageAnim());
         }
-
-
-
     }
     // Функція додавання життя
     public override void AddLives()
@@ -211,8 +203,6 @@ public class character : Unit
             StartCoroutine(DamageAnim());
         }
     }
-
-
     bool IsGrounded()
     {
         Vector2 position = transform.position;
@@ -246,8 +236,6 @@ public class character : Unit
     {
         key++;
     }
-
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "checkpoint")
@@ -259,5 +247,9 @@ public class character : Unit
 
         }
     }
- 
+    public  void CreateDust()
+    {
+      //  Dust.Play();
+    }
+  
 }
