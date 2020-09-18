@@ -6824,7 +6824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821420102}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.02, y: 0.63, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7, y: 7.8440657, z: 1}
   m_Children: []
   m_Father: {fileID: 1471343506}
@@ -9724,7 +9724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471343505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 55.05, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 821420103}
@@ -10315,21 +10315,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55aa0be2f3f014faca007f3ed7c171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key: 0
+  livesbar: {fileID: 0}
+  speed: 5
+  collectlives: 0
   respawn: {fileID: 1948256354}
   CanvasLose: {fileID: 1821122502}
   Controller: {fileID: 437467066}
-  key: 0
-  collectlives: 0
-  livesbar: {fileID: 0}
-  speed: 5
-  jumpForce: 8.5
-  isGrounded: 1
   currentRespawn: {fileID: 1948256354}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   CheckPointSound: {fileID: 1032451777}
   JumpMusic: {fileID: 488907465}
+  jumpForce: 8.5
+  isGrounded: 1
 --- !u!50 &1603982401
 Rigidbody2D:
   serializedVersion: 4

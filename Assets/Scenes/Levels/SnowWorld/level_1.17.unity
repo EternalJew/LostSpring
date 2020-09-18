@@ -1289,7 +1289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 421468892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.18, y: 0.26, z: 0}
+  m_LocalPosition: {x: -10.1, y: 0.26, z: 0}
   m_LocalScale: {x: 0.59999996, y: 0.55, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21164,21 +21164,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55aa0be2f3f014faca007f3ed7c171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key: 0
+  livesbar: {fileID: 0}
+  speed: 5
+  collectlives: 0
   respawn: {fileID: 421468892}
   CanvasLose: {fileID: 435613016}
   Controller: {fileID: 2126746799}
-  key: 0
-  collectlives: 0
-  livesbar: {fileID: 0}
-  speed: 5
-  jumpForce: 8.5
-  isGrounded: 1
   currentRespawn: {fileID: 421468892}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   CheckPointSound: {fileID: 902804097}
   JumpMusic: {fileID: 1760513700}
+  jumpForce: 8.5
+  isGrounded: 1
 --- !u!50 &1535600635
 Rigidbody2D:
   serializedVersion: 4
@@ -21867,7 +21867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750527370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.0002885, y: 1.1587477, z: 216.54688}
+  m_LocalPosition: {x: -5.0002885, y: 1.112, z: 216.54688}
   m_LocalScale: {x: 4, y: 2.5, z: 1}
   m_Children: []
   m_Father: {fileID: 333034550}
@@ -22837,7 +22837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9c714caec797a4aa37565171cdf704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   childTransform: {fileID: 1836860796}
   transformB: {fileID: 1970377309}
 --- !u!251 &1836860793

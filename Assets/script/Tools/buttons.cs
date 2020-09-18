@@ -127,6 +127,26 @@ public class buttons : MonoBehaviour
     {
         SceneManager.LoadScene("level_1.15");
     }
+    public void PlayLevel_16()
+    {
+        SceneManager.LoadScene("level_1.16");
+    }
+    public void PlayLevel_17()
+    {
+        SceneManager.LoadScene("level_1.17");
+    }
+    public void PlayLevel_18()
+    {
+        SceneManager.LoadScene("level_1.18");
+    }
+    public void PlayLevel_19()
+    {
+        SceneManager.LoadScene("level_1.19");
+    }
+    public void PlayLevel_20()
+    {
+        SceneManager.LoadScene("level_1.20");
+    }
     public void RightArrow()
     {
         SceneManager.LoadScene("levels_2");

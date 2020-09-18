@@ -79,7 +79,7 @@ public class CharController : MonoBehaviour
 
     public void Flip()
     {
-        //Character.CreateDust();
+        // Character.CreateDust();
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
